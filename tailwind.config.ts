@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				cosmic: {
+					DEFAULT: '#0F172A', // Deep midnight blue
+					foreground: '#F5F5F5', // Starlight white
+					accent: '#8B5CF6', // Soft purple
+					'accent-light': '#C4B5FD', // Lavender
+					highlight: '#FBBF24', // Starlight yellow
+					pink: '#EC4899', // Cosmic pink
+					'pink-light': '#F9A8D4', // Soft pink
+					blue: '#1E293B', // Deep blue
+					'blue-light': '#334155', // Lighter blue
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,27 +72,47 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'twinkle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px 2px rgba(139, 92, 246, 0.3)' },
+					'50%': { boxShadow: '0 0 20px 5px rgba(139, 92, 246, 0.6)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'twinkle': 'twinkle 4s ease-in-out infinite',
+				'fade-in': 'fade-in 1.5s ease-out',
+				'glow': 'glow 4s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'cosmic-gradient': 'linear-gradient(to bottom right, #0F172A, #1E293B)',
+				'dream-gradient': 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+				'affirmation-gradient': 'linear-gradient(to right, #EC4899, #8B5CF6)',
+				'moon-gradient': 'radial-gradient(circle, #F5F5F5 30%, #C4B5FD 100%)',
+				'star-gradient': 'radial-gradient(circle, #FBBF24 10%, transparent 70%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
