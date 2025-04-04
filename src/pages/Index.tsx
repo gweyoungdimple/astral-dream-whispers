@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import MoonPhase from '../components/MoonPhase';
 import AffirmationCard from '../components/AffirmationCard';
 import DreamJournal from '../components/DreamJournal';
+import GratitudeJournal from '../components/GratitudeJournal';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -34,6 +35,10 @@ const Index = () => {
         
         <section className="mb-16">
           <DreamJournal />
+        </section>
+        
+        <section className="mb-16">
+          <GratitudeJournal />
         </section>
       </main>
       

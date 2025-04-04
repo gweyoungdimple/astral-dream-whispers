@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Moon, Star, SunMoon, Music } from 'lucide-react';
+import { Moon, Star, SunMoon, Music, Sparkles, BookOpen } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -25,15 +25,27 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link to="/meditation" className="cosmic-link flex items-center gap-2">
+                <Sparkles className="h-4 w-4" />
+                <span className="hidden md:inline">Meditation</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/horoscope" className="cosmic-link flex items-center gap-2">
+                <BookOpen className="h-4 w-4" />
+                <span className="hidden md:inline">Horoscope</span>
+              </Link>
+            </li>
+            <li>
               <a href="#dreams" className="cosmic-link flex items-center gap-2">
                 <Moon className="h-4 w-4" />
                 <span className="hidden md:inline">Dreams</span>
               </a>
             </li>
             <li>
-              <a href="#affirmations" className="cosmic-link flex items-center gap-2">
+              <a href="#gratitude" className="cosmic-link flex items-center gap-2">
                 <Star className="h-4 w-4" />
-                <span className="hidden md:inline">Affirmations</span>
+                <span className="hidden md:inline">Gratitude</span>
               </a>
             </li>
           </ul>
