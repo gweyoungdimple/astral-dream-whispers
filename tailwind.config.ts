@@ -94,7 +94,16 @@ export default {
 				'glow': {
 					'0%, 100%': { boxShadow: '0 0 5px 2px rgba(139, 92, 246, 0.3)' },
 					'50%': { boxShadow: '0 0 20px 5px rgba(139, 92, 246, 0.6)' }
-				}
+				},
+                'pulse-light': {
+                    '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                    '50%': { opacity: '0.8', transform: 'scale(1.05)' }
+                },
+                'color-shift': {
+                    '0%': { filter: 'hue-rotate(0deg)' },
+                    '50%': { filter: 'hue-rotate(15deg)' },
+                    '100%': { filter: 'hue-rotate(0deg)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -102,7 +111,9 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'twinkle': 'twinkle 4s ease-in-out infinite',
 				'fade-in': 'fade-in 1.5s ease-out',
-				'glow': 'glow 4s ease-in-out infinite'
+				'glow': 'glow 4s ease-in-out infinite',
+                'pulse-light': 'pulse-light 6s ease-in-out infinite',
+                'color-shift': 'color-shift 8s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'cosmic-gradient': 'linear-gradient(to bottom right, #0F172A, #1E293B)',
@@ -110,9 +121,13 @@ export default {
 				'affirmation-gradient': 'linear-gradient(to right, #EC4899, #8B5CF6)',
 				'moon-gradient': 'radial-gradient(circle, #F5F5F5 30%, #C4B5FD 100%)',
 				'star-gradient': 'radial-gradient(circle, #FBBF24 10%, transparent 70%)',
+                'nebula-gradient': 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+                'cosmic-glow': 'radial-gradient(circle, rgba(196, 181, 253, 0.3) 0%, transparent 70%)'
 			},
+            scale: {
+                '102': '1.02',
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

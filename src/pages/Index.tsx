@@ -6,6 +6,7 @@ import MoonPhase from '../components/MoonPhase';
 import AffirmationCard from '../components/AffirmationCard';
 import DreamJournal from '../components/DreamJournal';
 import GratitudeJournal from '../components/GratitudeJournal';
+import CosmicAmbience from '../components/CosmicAmbience';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -31,6 +32,10 @@ const Index = () => {
               <AffirmationCard />
             </div>
           </div>
+        </section>
+        
+        <section className="mb-16">
+          <CosmicAmbience />
         </section>
         
         <section className="mb-16">

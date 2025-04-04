@@ -50,6 +50,12 @@
     @apply bg-cosmic text-cosmic-foreground h-full overflow-x-hidden font-sans;
     background-image: radial-gradient(circle at 70% 20%, #1E293B 0%, #0F172A 100%);
     background-attachment: fixed;
+    transition: background-color 1.5s ease, filter 1.5s ease;
+  }
+
+  body.relaxation-mode {
+    filter: brightness(0.85) saturate(0.85);
+    background-image: radial-gradient(circle at 50% 50%, #1A1F2C 0%, #0F172A 100%);
   }
 
   /* Cosmic scrollbar */
@@ -89,6 +95,23 @@
 
   .star {
     @apply absolute rounded-full bg-white;
+  }
+  
+  .relaxation-active {
+    @apply bg-cosmic-blue/50 shadow-lg shadow-cosmic-accent/20 border-cosmic-accent/40;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
   }
 }
 
